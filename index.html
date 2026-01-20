@@ -4,254 +4,230 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Atanor · Laboratorio Terapéutico</title>
-  <meta name="description" content="Atanor es un laboratorio terapéutico grupal basado en ACT y expresión artística para transformar el malestar en acción con sentido, en Medellín." />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0e1a16;           /* verde bosque oscuro */
-      --bg-soft: #152621;      /* verde profundo */
-      --text: #eef3f1;         /* blanco suave */
-      --muted: #b8c7c2;        /* verde grisáceo */
-      --accent: #e09f3e;       /* ámbar/fuego */
-      --accent-soft: #f2c57c;  /* fuego suave */
+      --bg-light: #f9f7f2;      /* Crema orgánico para el fondo */
+      --forest: #1b2d27;        /* Verde profundo para textos y acentos */
+      --terracotta: #b56b45;    /* Tierra/Alquimia para énfasis */
+      --gold: #d4a373;          /* Dorado suave para detalles */
+      --text-main: #2c3e38;     /* Gris verdoso oscuro para lectura */
+      --white: #ffffff;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+      background: var(--bg-light);
+      color: var(--text-main);
+      line-height: 1.7;
     }
 
+    /* Hero Section */
     header {
-      min-height: 100vh;
-      background: linear-gradient(rgba(14,26,22,0.85), rgba(14,26,22,0.85)), url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+      min-height: 90vh;
+      background: linear-gradient(rgba(27, 45, 39, 0.6), rgba(27, 45, 39, 0.6)), 
+                  url('https://images.unsplash.com/photo-1518732714860-b62714ce0c59?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       padding: 2rem;
+      color: var(--white);
     }
+
+    header div { max-width: 800px; }
 
     header h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      letter-spacing: 0.05em;
+      font-size: clamp(3rem, 8vw, 5rem);
+      letter-spacing: 0.15em;
       margin-bottom: 1rem;
+      font-weight: 400;
     }
 
     header h2 {
-      font-weight: 300;
-      font-size: 1.3rem;
-      color: var(--accent-soft);
-      margin-bottom: 2rem;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.5rem;
+      color: var(--gold);
+      margin-bottom: 2.5rem;
     }
 
-    header p {
-      max-width: 700px;
-      margin: 0 auto 2.5rem;
-      font-size: 1.05rem;
-      color: var(--muted);
-    }
-
-    .cta {
+    .cta-main {
       display: inline-block;
-      padding: 0.9rem 2rem;
-      border: 1px solid var(--accent);
-      color: var(--accent);
+      padding: 1.2rem 3rem;
+      background: var(--terracotta);
+      color: var(--white);
       text-decoration: none;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.2em;
       font-size: 0.85rem;
-      transition: all 0.3s ease;
+      font-weight: 500;
+      transition: all 0.4s ease;
+      border-radius: 2px;
     }
 
-    .cta:hover {
-      background: var(--accent);
-      color: #111;
+    .cta-main:hover {
+      background: #965636;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     }
 
+    /* Content Sections */
     section {
-      padding: 5rem 2rem;
+      padding: 8rem 2rem;
       max-width: 1100px;
       margin: auto;
     }
 
-    section h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      color: var(--accent-soft);
-    }
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      color: var(--accent-soft);
+    .flex-content {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      flex-wrap: wrap;
     }
 
-    section p {
-      max-width: 800px;
-      margin-bottom: 1.2rem;
-      color: var(--muted);
+    .flex-content div { flex: 1; min-width: 300px; }
+
+    h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      color: var(--forest);
+      margin-bottom: 1.5rem;
     }
+
+    p { margin-bottom: 1.5rem; font-size: 1.1rem; color: var(--text-main); }
+
+    .image-frame {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      border-radius: 2px;
+      box-shadow: 20px 20px 0px var(--gold);
+    }
+
+    /* Grid Section */
+    .grid-bg { background: var(--forest); color: var(--white); }
+    .grid-bg h3 { color: var(--gold); }
+    .grid-bg p { color: #b8c7c2; }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 2rem;
-      margin-top: 3rem;
+      margin-top: 4rem;
     }
 
     .card {
-      background: var(--bg-soft);
-      padding: 2rem;
-      border-radius: 8px;
-      border: 1px solid #222;
+      padding: 3rem;
+      border: 1px solid rgba(212, 163, 115, 0.3);
+      transition: all 0.3s ease;
     }
 
+    .card:hover { border-color: var(--gold); background: rgba(255,255,255,0.03); }
+
     .card h4 {
-      color: var(--accent);
-      margin-bottom: 0.8rem;
-      font-weight: 500;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    /* Footer / Contact */
+    #contacto { text-align: center; background: var(--bg-light); }
+    
+    .contact-info {
+      margin-top: 3rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--terracotta);
     }
 
     footer {
-      padding: 3rem 2rem;
+      padding: 4rem 2rem;
       text-align: center;
-      background: #0b1411;
-      border-top: 1px solid #20332c;
-    }
-
-    footer p {
-      font-size: 0.85rem;
-      color: var(--muted);
-      max-width: 700px;
-      margin: auto;
+      background: #121d1a;
+      color: #6a857d;
+      font-size: 0.9rem;
     }
 
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
-      header h2 {
-        font-size: 1.1rem;
-      }
+      section { padding: 4rem 1.5rem; }
+      .flex-content { gap: 2rem; }
+      .image-frame { height: 300px; box-shadow: 10px 10px 0px var(--gold); }
     }
-      .image-section {
-      width: 100%;
-      max-width: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .image-section img {
-      width: 100%;
-      height: 60vh;
-      object-fit: cover;
-      filter: brightness(0.65) saturate(0.9);
-    }
-
-</style>
+  </style>
 </head>
 <body>
 
 <header>
   <div>
     <h1>ATANOR</h1>
-    <h2>Laboratorio Terapéutico</h2>
-    <p>
-      Un dispositivo terapéutico grupal basado en Psicología Clínica (ACT) y expresión artística para transformar el malestar en acción con sentido, en comunidad y contacto con la naturaleza.
-    </p>
-    <a href="#contacto" class="cta">Solicitar entrevista</a>
+    <h2>Laboratorio Terapéutico en La Aguacatala</h2>
+    <a href="#contacto" class="cta-main">Reservar entrevista de admisión</a>
   </div>
 </header>
 
-<section class="image-section">
-  <img src="https://images.unsplash.com/photo-1486179814561-6c4b5f0c3c7a?auto=format&fit=crop&w=1800&q=80" alt="Fogata pequeña y baja, fuego contenido y silencioso">
+<section class="flex-content">
+  <div>
+    <h3>El arte de transformar</h3>
+    <p>En el corazón de la alquimia, el <strong>Atanor</strong> era el horno de fuego constante donde la materia pesada se volvía sutil.</p>
+    <p>Hemos creado un refugio en Medellín para que hagas lo mismo con tu historia. Un espacio donde el malestar no se evita, se utiliza como materia prima para construir una vida con sentido, guiado por la psicología clínica y la expresión artística.</p>
+  </div>
+  <div>
+    <img src="https://images.unsplash.com/photo-1565191999001-551c187427bb?auto=format&fit=crop&w=800&q=80" class="image-frame" alt="Arte y transformación">
+  </div>
 </section>
 
-<section>
-  <h3>¿Qué es Atanor?</h3>
-  <p>
-    En la alquimia, el atanor era el horno de fuego constante: un contenedor seguro donde la materia era transformada por el calor.
-  </p>
-  <p>
-    Atanor es ese espacio. Un laboratorio terapéutico donde el malestar no se elimina ni se romantiza: se trabaja con rigor clínico, presencia y humanidad.
-  </p>
-</section>
-
-<section class="image-section">
-  <img src="https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?auto=format&fit=crop&w=1800&q=80" alt="Fogata pequeña encendida en la noche, fuego contenido">
-</section>
-
-<section>
-  <h3>¿Para quién es este espacio?</h3>
-  <div class="grid">
-    <div class="card">
-      <h4>Adultos conscientes</h4>
-      <p>Personas entre 25 y 55 años que buscan profundidad, no soluciones rápidas.</p>
-    </div>
-    <div class="card">
-      <h4>Malestar persistente</h4>
-      <p>Ansiedad, tristeza, vacío o sensación de desconexión con la propia vida.</p>
-    </div>
-    <div class="card">
-      <h4>Búsqueda de sentido</h4>
-      <p>Interés genuino por vivir de forma más coherente con lo que importa.</p>
+<section class="grid-bg">
+  <div style="max-width: 1100px; margin: auto;">
+    <h3>¿Para quién es Atanor?</h3>
+    <p>Un espacio transdiagnóstico para adultos que buscan profundidad y conexión real.</p>
+    <div class="grid">
+      <div class="card">
+        <h4>Mentes Inquietas</h4>
+        <p>Para quienes se sienten atrapados en sus pensamientos y buscan una forma diferente de soltar el control.</p>
+      </div>
+      <div class="card">
+        <h4>Buscadores de Sentido</h4>
+        <p>Para quienes desean alinear sus acciones cotidianas con lo que realmente valoran en la vida.</p>
+      </div>
+      <div class="card">
+        <h4>Amantes del Proceso</h4>
+        <p>Para quienes encuentran en el arte, la escritura o el fuego una vía de comunicación más honesta que las palabras.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="image-section">
-  <img src="https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?auto=format&fit=crop&w=1800&q=80" alt="Manos escribiendo y proceso terapéutico creativo">
-</section>
-
-<section>
-  <h3>Marco clínico</h3>
-  <p>
-    El laboratorio está basado en la Terapia de Aceptación y Compromiso (ACT), un enfoque psicológico con amplia evidencia científica.
-  </p>
-  <p>
-    A través del arte y la experiencia grupal entrenamos flexibilidad psicológica, aceptación del malestar, defusión cognitiva, contacto con valores y acción comprometida.
-  </p>
-</section>
-
-<section>
-  <h3>La experiencia Atanor</h3>
-  <div class="grid">
-    <div class="card"><h4>Ingreso</h4><p>Recepción cálida en el jardín con café o aromática.</p></div>
-    <div class="card"><h4>Encender el fuego</h4><p>Centramiento, respiración y presencia frente a la chimenea.</p></div>
-    <div class="card"><h4>El laboratorio</h4><p>Actividad central de expresión artística y procesamiento emocional.</p></div>
-    <div class="card"><h4>Círculo de fuego</h4><p>Compartir voluntario, escucha y validación en comunidad.</p></div>
-    <div class="card"><h4>Salida</h4><p>Compromiso de acción valiosa para la vida cotidiana.</p></div>
+<section class="flex-content" style="flex-direction: row-reverse;">
+  <div>
+    <h3>La Experiencia</h3>
+    <p>Nuestros encuentros ocurren en una casa-finca rodeada de verde, donde el tiempo corre distinto. </p>
+    <p>Cada sesión integra herramientas de la <strong>Terapia de Aceptación y Compromiso (ACT)</strong> con prácticas de escritura, pintura o cianotipia, finalizando siempre alrededor del fuego para validar nuestra experiencia común.</p>
   </div>
-</section>
-
-<section class="image-section">
-  <img src="https://images.unsplash.com/photo-1500534314209-a26db0f5b473?auto=format&fit=crop&w=1800&q=80" alt="Bosque verde con luz suave y sensación de calma">
+  <div>
+    <img src="https://images.unsplash.com/photo-1544376798-89aa6b82c6cd?auto=format&fit=crop&w=800&q=80" class="image-frame" style="box-shadow: -20px 20px 0px var(--gold);" alt="Fuego terapéutico">
+  </div>
 </section>
 
 <section id="contacto">
-  <h3>¿Te resuena?</h3>
-  <p>
-    El siguiente paso es una entrevista breve de admisión para cuidar el espacio y al grupo.
-  </p>
-  <p>
-    Escríbenos para solicitarla y recibir información sobre fechas, cupos y valores.
-  </p>
-  <p><strong>Contacto:</strong> atanor@tucorreo.com · WhatsApp: +57 XXX XXX XXXX</p>
+  <h3>Inicia tu proceso</h3>
+  <p style="max-width: 600px; margin: auto;">Para asegurar la seguridad y profundidad del grupo, realizamos una breve entrevista previa con cada integrante.</p>
+  <div class="contact-info">
+    <p>WhatsApp: +57 300 000 0000</p>
+    <p style="font-size: 1.1rem; color: var(--forest);">Medellín · La Aguacatala</p>
+  </div>
+  <br><br>
+  <a href="#" class="cta-main">Enviar mensaje ahora</a>
 </section>
 
 <footer>
-  <p>
-    Atanor no reemplaza procesos psicoterapéuticos individuales ni psiquiátricos cuando son necesarios. Espacio facilitado por profesional en psicología clínica con enfoque ACT.
-  </p>
+  <p>Facilitado por Psicólogo Clínico · Especialista en Terapias de Tercera Generación</p>
+  <p>© 2026 Atanor Laboratorio Terapéutico. Todos los derechos reservados.</p>
 </footer>
 
 </body>
