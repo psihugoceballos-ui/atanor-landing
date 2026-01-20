@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atanor · Laboratorio Terapéutico</title>
+  <meta name="description" content="Atanor es un laboratorio terapéutico grupal basado en ACT y expresión artística para transformar el malestar en acción con sentido, en Medellín." />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0e1a16;           /* verde bosque oscuro */
+      --bg-soft: #152621;      /* verde profundo */
+      --text: #eef3f1;         /* blanco suave */
+      --muted: #b8c7c2;        /* verde grisáceo */
+      --accent: #e09f3e;       /* ámbar/fuego */
+      --accent-soft: #f2c57c;  /* fuego suave */
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      min-height: 100vh;
+      background: linear-gradient(rgba(14,26,22,0.85), rgba(14,26,22,0.85)), url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+    }
+
+    header h2 {
+      font-weight: 300;
+      font-size: 1.3rem;
+      color: var(--accent-soft);
+      margin-bottom: 2rem;
+    }
+
+    header p {
+      max-width: 700px;
+      margin: 0 auto 2.5rem;
+      font-size: 1.05rem;
+      color: var(--muted);
+    }
+
+    .cta {
+      display: inline-block;
+      padding: 0.9rem 2rem;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 0.85rem;
+      transition: all 0.3s ease;
+    }
+
+    .cta:hover {
+      background: var(--accent);
+      color: #111;
+    }
+
+    section {
+      padding: 5rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    section h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: var(--accent-soft);
+    }
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: var(--accent-soft);
+    }
+
+    section p {
+      max-width: 800px;
+      margin-bottom: 1.2rem;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .card {
+      background: var(--bg-soft);
+      padding: 2rem;
+      border-radius: 8px;
+      border: 1px solid #222;
+    }
+
+    .card h4 {
+      color: var(--accent);
+      margin-bottom: 0.8rem;
+      font-weight: 500;
+    }
+
+    footer {
+      padding: 3rem 2rem;
+      text-align: center;
+      background: #0b1411;
+      border-top: 1px solid #20332c;
+    }
+
+    footer p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      max-width: 700px;
+      margin: auto;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      header h2 {
+        font-size: 1.1rem;
+      }
+    }
+      .image-section {
+      width: 100%;
+      max-width: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .image-section img {
+      width: 100%;
+      height: 60vh;
+      object-fit: cover;
+      filter: brightness(0.65) saturate(0.9);
+    }
+
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>ATANOR</h1>
+    <h2>Laboratorio Terapéutico</h2>
+    <p>
+      Un dispositivo terapéutico grupal basado en Psicología Clínica (ACT) y expresión artística para transformar el malestar en acción con sentido, en comunidad y contacto con la naturaleza.
+    </p>
+    <a href="#contacto" class="cta">Solicitar entrevista</a>
+  </div>
+</header>
+
+<section class="image-section">
+  <img src="https://images.unsplash.com/photo-1486179814561-6c4b5f0c3c7a?auto=format&fit=crop&w=1800&q=80" alt="Fogata pequeña y baja, fuego contenido y silencioso">
+</section>
+
+<section>
+  <h3>¿Qué es Atanor?</h3>
+  <p>
+    En la alquimia, el atanor era el horno de fuego constante: un contenedor seguro donde la materia era transformada por el calor.
+  </p>
+  <p>
+    Atanor es ese espacio. Un laboratorio terapéutico donde el malestar no se elimina ni se romantiza: se trabaja con rigor clínico, presencia y humanidad.
+  </p>
+</section>
+
+<section class="image-section">
+  <img src="https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?auto=format&fit=crop&w=1800&q=80" alt="Fogata pequeña encendida en la noche, fuego contenido">
+</section>
+
+<section>
+  <h3>¿Para quién es este espacio?</h3>
+  <div class="grid">
+    <div class="card">
+      <h4>Adultos conscientes</h4>
+      <p>Personas entre 25 y 55 años que buscan profundidad, no soluciones rápidas.</p>
+    </div>
+    <div class="card">
+      <h4>Malestar persistente</h4>
+      <p>Ansiedad, tristeza, vacío o sensación de desconexión con la propia vida.</p>
+    </div>
+    <div class="card">
+      <h4>Búsqueda de sentido</h4>
+      <p>Interés genuino por vivir de forma más coherente con lo que importa.</p>
+    </div>
+  </div>
+</section>
+
+<section class="image-section">
+  <img src="https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?auto=format&fit=crop&w=1800&q=80" alt="Manos escribiendo y proceso terapéutico creativo">
+</section>
+
+<section>
+  <h3>Marco clínico</h3>
+  <p>
+    El laboratorio está basado en la Terapia de Aceptación y Compromiso (ACT), un enfoque psicológico con amplia evidencia científica.
+  </p>
+  <p>
+    A través del arte y la experiencia grupal entrenamos flexibilidad psicológica, aceptación del malestar, defusión cognitiva, contacto con valores y acción comprometida.
+  </p>
+</section>
+
+<section>
+  <h3>La experiencia Atanor</h3>
+  <div class="grid">
+    <div class="card"><h4>Ingreso</h4><p>Recepción cálida en el jardín con café o aromática.</p></div>
+    <div class="card"><h4>Encender el fuego</h4><p>Centramiento, respiración y presencia frente a la chimenea.</p></div>
+    <div class="card"><h4>El laboratorio</h4><p>Actividad central de expresión artística y procesamiento emocional.</p></div>
+    <div class="card"><h4>Círculo de fuego</h4><p>Compartir voluntario, escucha y validación en comunidad.</p></div>
+    <div class="card"><h4>Salida</h4><p>Compromiso de acción valiosa para la vida cotidiana.</p></div>
+  </div>
+</section>
+
+<section class="image-section">
+  <img src="https://images.unsplash.com/photo-1500534314209-a26db0f5b473?auto=format&fit=crop&w=1800&q=80" alt="Bosque verde con luz suave y sensación de calma">
+</section>
+
+<section id="contacto">
+  <h3>¿Te resuena?</h3>
+  <p>
+    El siguiente paso es una entrevista breve de admisión para cuidar el espacio y al grupo.
+  </p>
+  <p>
+    Escríbenos para solicitarla y recibir información sobre fechas, cupos y valores.
+  </p>
+  <p><strong>Contacto:</strong> atanor@tucorreo.com · WhatsApp: +57 XXX XXX XXXX</p>
+</section>
+
+<footer>
+  <p>
+    Atanor no reemplaza procesos psicoterapéuticos individuales ni psiquiátricos cuando son necesarios. Espacio facilitado por profesional en psicología clínica con enfoque ACT.
+  </p>
+</footer>
+
+</body>
+</html>
